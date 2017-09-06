@@ -1,0 +1,76 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Goalz: convert your monolithic goal into bite-sized onez</title>
+    <meta name="description" content="A simple common-or-garden goal calculator - no added preservatives.">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Goalz
+      </h1>: convert your monolithic goal into bite-sized onez
+    </header>
+
+    <main>
+      <form>
+        <input type="text"  maxlength="30"  value="2017 bike-sharing goal:">
+        <br>
+        <input id="goal" type="tel" minlength="1" maxlength="7" value="2000">
+        <input id="unit" type="text"  maxlength="10" value="km"> by 
+        <input id="dl" type="date" max="2027-12-31" value="2018-01-01">
+        <br>
+        Progress so far:<input id="progress" type="tel" minlength="1" maxlength="7" value="1259.2"><span id="custom">km</span>
+        <br>
+        Forseeable breaks:<input id="breaks" type="tel" minlength="1" maxlength="3" value="14">days
+        <br><br>
+        <button type="submit">Goalz!</button>
+      </form>
+      
+      
+      <div id="remainder"></div>
+      <section id="results">
+        <div class="floats">
+          <span id="day"></span>
+        </div>
+        <div class="floats">
+          <span id="week"></span>
+        </div>
+        <div class="floats">
+          <span id="month"></span>
+        </div>
+      </section>
+      
+      
+    </main>
+
+    <footer>
+      Made by <a href="https://twitter.com/zmingyu">@zmingyu</a>
+      <br>
+      Remix this in 
+      <a href="https://glitch.com">
+        Glitch
+      </a>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
